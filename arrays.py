@@ -16,6 +16,26 @@ def issumbruteforce(x, sum):
 def sortandfind(x,sum):
 
 	def sortnos(x):
-		
+		x
+
+def issumhashmap(x,sum):
+	match = {} #keys are values stored in the array and the values are indices of the array
+	found = 0
+	counter = 0 
+	for i in xrange(len(x)):
+		if sum-x[i] in match.keys():
+			if len(match[sum-x[i]]):
+				counter = counter+1
+			for t in match[sum-x[i]]: #sum-x[i] is the key, t are all the positions for this key; iterate over all the psoitions for the key
+				found +=1
+				print "%d: [%d]=%d - [%d]=%d"%(found, t, x[t], i, x[i])
+		if x[i] in match.keys():
+			match[x[i]].append(i)
+		else:
+			match[x[i]] = [i]
+	print match.keys()
+	print match.values()
+	print counter
+	return found
 
 	
