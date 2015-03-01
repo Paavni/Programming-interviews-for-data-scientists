@@ -13,11 +13,6 @@ def issumbruteforce(x, sum):
 					print "sum of %d and %d is %d" %(x[i], x[j], sum)
 	print "No of pairs found is %d" %(found)
 
-def sortandfind(x,sum):
-
-	def sortnos(x):
-		x
-
 def issumhashmap(x,sum):
 	match = {} #keys are values stored in the array and the values are indices of the array
 	found = 0
@@ -38,4 +33,27 @@ def issumhashmap(x,sum):
 	print counter
 	return found
 
+#sort union of two sorted arrays 
+
+def sortunion(x,y):	
+	i = j = k = 0
+	sortedunion = []
+	while (i<len(x) and j <len(y)):
+		if (x[i]<y[j]):
+			sortedunion[k]=x[i]
+			k = k+1
+			i = i+1
+		if (y[j]>x[i]]):
+			sortedunion[k]=y[j]
+			k = k+1
+			j = j+1
+	while(i<len(x)):	
+		sortedunion[k]=x[i]
+			k = k+1
+			i = i+1
+	while(j<len(y)):	
+		sortedunion[k]=y[j]
+			k = k+1
+			j = j+1
+	return(sortedunion)
 	
