@@ -7,7 +7,7 @@ def fizzbuzz(i):
 			str+="fizz"
 		if (i%5==0):
 			str+="buzz"
-		if str == ""
+		if str == "":
 			str = n 
 		print str
 
